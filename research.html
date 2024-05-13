@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.4.553">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -44,6 +44,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -59,9 +60,9 @@ ul.task-list li input[type="checkbox"] {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Avi Feller</span>
     </a>
@@ -72,25 +73,25 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html" rel="" target="">
- <span class="menu-text">about</span></a>
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">about</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./research.html" rel="" target="" aria-current="page">
- <span class="menu-text">research</span></a>
+    <a class="nav-link active" href="./research.html" aria-current="page"> 
+<span class="menu-text">research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./teaching.html" rel="" target="">
- <span class="menu-text">teaching</span></a>
+    <a class="nav-link" href="./teaching.html"> 
+<span class="menu-text">teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Feller_CV_July_2023.pdf" rel="" target="">
- <span class="menu-text">cv</span></a>
+    <a class="nav-link" href="./Feller_CV_July_2023.pdf"> 
+<span class="menu-text">cv</span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
-</div>
           </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -137,7 +138,9 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
+
 </header>
+
 
 <p>[<a class="text-decoration-none" target="_blank" href="https://scholar.google.com/citations?hl=en&amp;user=Mz7heb4AAAAJ&amp;view_op=list_works&amp;sortby=pubdate"><strong>Google Scholar</strong></a>] [<a class="text-decoration-none" target="_blank" href="https://arxiv.org/a/feller_a_1.html"><strong>arXiv</strong></a>]</p>
 <h2 id="working-papers" class="anchored">Working Papers</h2>
@@ -146,7 +149,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="card card-body">The idea of covariate balance is at the core of causal inference. Inverse propensity weights play a central role because they are the unique set of weights that balance the covariate distributions of different treatment groups. We discuss two broad approaches to estimating these weights: the more traditional one, which fits a propensity score model and then uses the reciprocal of the estimated propensity score to construct weights, and the balancing approach, which estimates the inverse propensity weights essentially by the method of moments, finding weights that achieve balance in the sample. We review ideas from the causal inference, sample surveys, and semiparametric estimation literatures, with particular attention to the role of balance as a sufficient condition for robust inference. We focus on the inverse propensity weighting and augmented inverse propensity weighting estimators for the average treatment effect given strong ignorability and consider generalizations for a broader class of problems including policy evaluation and the estimation of individualized treatment effects.
 </div><br></div>
 <p><strong>Estimating racial disparities in emergency general surgery.</strong> Eli Ben-Michael, Avi Feller, Rachel Kelz, and Luke Keele. [<a href="#" data-bs-target="#egs_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a class="text-decoration-none" target="_blank" href="https://arxiv.org/abs/2209.04321"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
-
         <div id="egs_abstract" class="collapse">
 <div class="card card-body">Research documents that Black patients experience worse general surgery outcomes than white patients in the United States. In this paper, we focus on an important but less-examined category: the surgical treatment of emergency general surgery (EGS) conditions, which refers to medical emergencies where the injury is "endogenous," such as a burst appendix. Our goal is to assess racial disparities for common outcomes after EGS treatment using an administrative database of hospital claims in New York, Florida, and Pennsylvania, and to understand the extent to which differences are attributable to patient-level risk factors versus hospital-level factors. To do so, we use a class of linear weighting estimators that re-weight white patients to have a similar distribution of baseline characteristics as Black patients. This framework nests many common approaches, including matching and linear regression, but offers important advantages over these methods in terms of controlling imbalance between groups, minimizing extrapolation, and reducing computation time. Applying this approach to the claims data, we find that disparities estimates that adjust for the admitting hospital are substantially smaller than estimates that adjust for patient baseline characteristics only, suggesting that hospital-specific factors are important drivers of racial disparities in EGS outcomes.
 </div><br></div>
@@ -163,11 +165,17 @@ confidence bounds, which we term O-values, for this quantity. We show these boun
 <p><strong>Using multiple outcomes to improve the Synthetic Control Method.</strong> Liyang Sun, Eli Ben-Michael, and Avi Feller. [<a href="#" class="text-decoration-none" data-bs-target="#scm_multioutcomes_abstract" data-bs-toggle="collapse">abstract</a>; <a href="https://arxiv.org/abs/2311.16260" class="text-decoration-none"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
 <div id="scm_multioutcomes_abstract" class="collapse">
 <div class="card card-body">When there are multiple outcome series of interest, Synthetic Control analyses typically proceed by estimating separate weights for each outcome. In this paper, we instead propose estimating a common set of weights across outcomes, by balancing either a vector of all outcomes or an index or average of them. Under a low-rank factor model, we show that these approaches lead to lower bias bounds than separate weights, and that averaging leads to further gains when the number of outcomes grows. We illustrate this via simulation and in a re-analysis of the impact of the Flint water crisis on educational outcomes.</div><br></div>
-<p><strong>Continuous treatment effects with surrogate outcomes.</strong> Zhenghao Zeng, David Arbour, Avi Feller, Raghavendra Addanki, Ryan Rossi, Ritwik Sinha, and Edward Kennedy. [<a href="#" class="text-decoration-none" data-bs-target="#continuous_surrogates_abstract" data-bs-toggle="collapse">abstract</a>; <a href="https://arxiv.org/abs/2402.00168" class="text-decoration-none"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
+<h2 id="forthcoming" class="anchored">Forthcoming</h2>
+<p><strong>Statistical methods to estimate the impact of gun policy on gun violence.</strong> Eli Ben-Michael, Mitchell Doucette, Avi Feller, Alexander McCourt, and Elizabeth Stuart. In <em>Gun Violence: Statistical Issues,</em> edited by C. Loeffler, L. Xue, and J. Rosenberger. [<a href="#" class="text-decoration-none" data-bs-target="#gun_policy_chapter" data-bs-toggle="collapse">abstract</a>; <a href="https://arxiv.org/abs/2404.11506" class="text-decoration-none"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
+<div id="gun_policy_chapter" class="collapse">
+<div class="card card-body">Gun violence is a critical public health and safety concern in the United States. There is considerable variability in policy proposals meant to curb gun violence, ranging from increasing gun availability to deter potential assailants (e.g., concealed carry laws or arming school teachers) to restricting access to firearms (e.g., universal background checks or banning assault weapons). Many studies use state-level variation in the enactment of these policies in order to quantify their effect on gun violence. In this paper, we discuss the policy trial emulation framework for evaluating the impact of these policies, and show how to apply this framework to estimating impacts via difference-in-differences and synthetic controls when there is staggered adoption of policies across jurisdictions, estimating the impacts of right-to-carry laws on violent crime as a case study.</div><br></div>
+<p><strong>Towards representation learning for weighting problems in design-based causal inference.</strong> Oscar Clivio, Avi Feller, and Chris Holmes. <em>Uncertainty in Artificial Intelligence (UAI).</em> [<a href="#" class="text-decoration-none" data-bs-target="#clivio_uai_abstract" data-bs-toggle="collapse">abstract</a>]</p>
+<div id="clivio_uai_abstract" class="collapse">
+<div class="card card-body">Reweighting a distribution to minimize a distance to a target distribution is a powerful and flexible strategy for estimating a wide range of causal effects, but can be challenging in practice because optimal weights typically depend on knowledge of the underlying data generating process. In this paper, we focus on design-based weights, which do not incorporate outcome information; prominent examples include prospective cohort studies, survey weighting, and the weighting portion of augmented weighting estimators. In such applications, we explore the central role of representation learning in finding desirable weights in practice. Unlike the common approach of assuming a well-specified representation, we highlight the error due to the choice of a representation and outline a general framework for finding suitable representations that minimize this error. Building on recent work that combines balancing weights and neural networks, we propose an end-to-end estimation procedure that learns a flexible representation, while retaining promising theoretical properties. We show that this approach is competitive in a range of common causal inference tasks.</div><br></div>
+<p><strong>Continuous treatment effects with surrogate outcomes.</strong> Zhenghao Zeng, David Arbour, Avi Feller, Raghavendra Addanki, Ryan Rossi, Ritwik Sinha, and Edward Kennedy. <em>International Conference on Machine Learning (ICML).</em> [<a href="#" class="text-decoration-none" data-bs-target="#continuous_surrogates_abstract" data-bs-toggle="collapse">abstract</a>; <a href="https://arxiv.org/abs/2402.00168" class="text-decoration-none"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
 <div id="continuous_surrogates_abstract" class="collapse">
 <div class="card card-body">In many real-world causal inference applications, the primary outcomes (labels) are often partially missing, especially if they are expensive or difficult to collect. If the missingness depends on covariates (i.e., missingness is not completely at random), analyses based on fully-observed samples alone may be biased. Incorporating surrogates, which are fully observed post-treatment variables related to the primary outcome, can improve estimation in this case. In this paper, we study the role of surrogates in estimating continuous treatment effects and propose a doubly robust method to efficiently incorporate surrogates in the analysis, which uses both labeled and unlabeled data and does not suffer from the above selection bias problem. Importantly, we establish asymptotic normality of the proposed estimator and show possible improvements on the variance compared with methods that solely use labeled data. Extensive simulations show our methods enjoy appealing empirical performance.</div><br></div>
-<h2 id="forthcoming" class="anchored">Forthcoming</h2>
-<p><strong>Addressing Missing Data Due to COVID-19: Two Early Childhood Case Studies.</strong> Avi Feller, Maia Connors, Christina Weiland, John Easton, Stacy Ehrlich Loewe, John Francis, Sarah Kabourek, Diana Leyva, Anna Shapiro, and Gloria Yeomans-Maldonado. <em>Journal of Research on Educational Effectiveness.</em> Accepted. [<a href="#" class="text-decoration-none" data-bs-target="#covid_missing_data_abstract" data-bs-toggle="collapse">abstract</a>; <a href="papers/COVID_Missing_Data.pdf" class="text-decoration-none"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
+<p><strong>Addressing missing data due to COVID-19: Two early childhood case studies.</strong> Avi Feller, Maia Connors, Christina Weiland, John Easton, Stacy Ehrlich Loewe, John Francis, Sarah Kabourek, Diana Leyva, Anna Shapiro, and Gloria Yeomans-Maldonado. <em>Journal of Research on Educational Effectiveness.</em> Accepted. [<a href="#" class="text-decoration-none" data-bs-target="#covid_missing_data_abstract" data-bs-toggle="collapse">abstract</a>; <a href="papers/COVID_Missing_Data.pdf" class="text-decoration-none"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
 <div id="covid_missing_data_abstract" class="collapse">
 <div class="card card-body">One part of COVID-19’s staggering impact on education has been to suspend or fundamentally alter ongoing education research projects. This paper addresses how to analyze the simple but fundamental example of a multi-cohort study in which student assessment data for the final cohort are missing because schools were closed, learning was virtual, and/or assessments were canceled or inconsistently collected due to COVID-19. We argue that current best-practice recommendations for addressing missing data may fall short in such studies because the assumptions that underpin these recommendations are violated. We then provide a new, simple decision-making framework for empirical researchers facing this situation and provide two empirical examples of how to apply this framework drawn from early childhood studies, one a cluster randomized trial and the other a descriptive longitudinal study. Based on this framework and the assumptions required to address the missing data, we advise against the standard recommendation of adjusting for missing outcomes (e.g., via imputation or weighting). Instead, changing the target quantity by restricting to fully-observed cohorts or by pivoting to focusing on an alternative outcome may be more appropriate.</div><br></div>
 <p><strong>Improving the estimation of site-specific effects and their distribution in multisite trials.</strong> JoonHo Lee, Jonathan Che, Sophia Rabe-Hesketh, Avi Feller, Luke Miratrix. <em>Journal of Educational and Behavioral Statistics.</em> Accepted. [<a href="#" data-bs-target="#multisite_dist_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a class="text-decoration-none" href="https://arxiv.org/abs/2308.06913" target="_blank"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
@@ -183,7 +191,6 @@ confidence bounds, which we term O-values, for this quantity. We show these boun
 <div class="card card-body">Measuring the effect of peers on individuals' outcomes is a challenging problem, in part because individuals often select peers who are similar in both observable and unobservable ways. Group formation experiments avoid this problem by randomly assigning individuals to groups and observing their responses; for example, do first‐year students have better grades when they are randomly assigned roommates who have stronger academic backgrounds? In this paper, we propose randomization‐based permutation tests for group formation experiments, extending classical Fisher Randomization Tests to this setting. The proposed tests are justified by the randomization itself, require relatively few assumptions, and are exact in finite samples. This approach can also complement existing strategies, such as linear‐in‐means models, by using a regression coefficient as the test statistic. We apply the proposed tests to two recent group formation experiments.</div><br></div>
 <h2 id="published-2023" class="anchored">2023</h2>
 <p><strong>Interpretable sensitivity analysis for balancing weights.</strong> Dan Soriano, Eli Ben-Michael, Peter Bickel, Avi Feller, and Sam Pimentel. <em>Journal of the Royal Statistical Society (Series A).</em> 186(4): 707–721. [<a href="#" data-bs-target="#sensitivity_bw_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="https://academic.oup.com/jrsssa/article-abstract/186/4/707/7083941" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>; <a class="text-decoration-none" href="https://arxiv.org/abs/2102.13218" target="_blank"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
-
         <div id="sensitivity_bw_abstract" class="collapse">
 <div class="card card-body">Assessing sensitivity to unmeasured confounding is an important step in observational studies, which typically estimate effects under the assumption that all confounders are measured. In this paper, we develop a sensitivity analysis framework for balancing weights estimators, an increasingly popular approach that solves an optimization problem to obtain weights that directly minimizes covariate imbalance. In particular, we adapt a sensitivity analysis framework using the percentile bootstrap for a broad class of balancing weights estimators. We prove that the percentile bootstrap procedure can, with only minor modifications, yield valid confidence intervals for causal effects under restrictions on the level of unmeasured confounding. We also propose an amplification—a mapping from a one-dimensional sensitivity analysis to a higher dimensional sensitivity analysis—to allow for interpretable sensitivity parameters in the balancing weights framework. We illustrate our method through extensive real data examples.
 </div><br></div>
@@ -262,7 +269,6 @@ individuals often select peers who are similar in both observable and unobservab
 <div id="overlap_abstract" class="collapse"><div class="card card-body">Causal inference in observational settings typically rests on a pair of identifying assumptions: (1) unconfoundedness and (2) covariate overlap, also known as positivity or common support. Investigators often argue that unconfoundedness is more plausible when many covariates are included in the analysis. Less discussed is the fact that covariate overlap is more difficult to satisfy in this setting. In this paper, we explore the implications of overlap in high-dimensional observational studies, arguing that this assumption is stronger than investigators likely realize. Our main innovation is to frame (strict) overlap in terms of bounds on a likelihood ratio, which allows us to leverage and expand on existing results from information theory. In particular, we show that strict overlap bounds discriminating information (e.g., Kullback-Leibler divergence) between the covariate distributions in the treated and control populations. We use these results to derive explicit bounds on the average imbalance in covariate means under strict overlap and a range of assumptions on the covariate distributions. Importantly, these bounds grow tighter as the dimension grows large, and converge to zero in some cases. We examine how restrictions on the treatment assignment and outcome processes can weaken the implications of certain overlap assumptions, but at the cost of stronger requirements for unconfoundedness. Taken together, our results suggest that adjusting for high-dimensional covariates does not necessarily make causal identification more plausible.</div><br></div>
 <h2 id="published-2020" class="anchored">2020</h2>
 <p><strong>Flexible sensitivity analysis for observational studies without observable implications.</strong> Alex Franks, Alex D’Amour, and Avi Feller. <em>Journal of the American Statistical Association.</em> 115(532): 1730-1746. [<a href="#" data-bs-target="#sensitivity_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="https://www.tandfonline.com/doi/10.1080/01621459.2019.1604369" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>; <a href="https://arxiv.org/abs/1809.00399" class="text-decoration-none" target="_blank"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
-
 <div id="sensitivity_abstract" class="collapse">
 <div class="card card-body">A fundamental challenge in observational causal inference is that assumptions about unconfoundedness are not testable from data. Assessing sensitivity to such assumptions is therefore important in practice. Unfortunately, some existing sensitivity analysis approaches inadvertently impose restrictions that are at odds with modern causal inference methods, which emphasize flexible models for observed data. To address this issue, we propose a framework that allows (1) flexible models for the observed data and (2) clean separation of the identified and unidentified parts of the sensitivity model. Our framework extends an approach from the missing data literature, known as Tukey’s factorization, to the causal inference setting. Under this factorization, we can represent the distributions of unobserved potential outcomes in terms of unidentified selection functions that posit a relationship between treatment assignment and unobserved potential outcomes. The sensitivity parameters in this framework are easily interpreted, and we provide heuristics for calibrating these parameters against observable quantities. We demonstrate the flexibility of this approach in two examples, where we estimate both average treatment effects and quantile treatment effects using Bayesian nonparametric models for the observed data.</div><br></div>
 <p><strong>Bayesian sensitivity analysis for offline policy evaluation.</strong> Jongbin Jung, Ravi Shroff, Avi Feller, and Sharad Goel. <em>AIES: Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society.</em> 64–70. [<a href="#" data-bs-target="#bsa_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="https://dl.acm.org/doi/10.1145/3375627.3375822" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>; <a href="https://arxiv.org/abs/1805.01868" class="text-decoration-none" target="_blank"><i class="bi bi-file-earmark-pdf" role="img" aria-label="pre-print"></i> pre-print</a>]</p>
@@ -318,7 +324,6 @@ In some cases, black defendants are substantially more likely than white defenda
 <div id="peer_excellence_abstract" class="collapse"><div class="card card-body">People are exposed to exemplary peer performances often (and sometimes by design in interventions). In two studies, we showed that exposure to exemplary peer performances can undermine motivation and success by causing people to perceive that they cannot attain their peers’ high levels of performance. It also causes de-identification with the relevant domain. We examined such discouragement by peer excellence by exploiting the incidental exposure to peers’ abilities that occurs when students are asked to assess each other’s work. Study 1 was a natural experiment in a massive open online course that employed peer assessment (N = 5,740). Exposure to exemplary peer performances caused a large proportion of students to quit the course. Study 2 explored underlying psychological mechanisms in an online replication (N = 361). Discouragement by peer excellence has theoretical implications for work on social judgment, social comparison, and reference bias and has practical implications for interventions that induce social comparisons.</div><br></div>
 <h2 id="published-2015" class="anchored">2015 and earlier</h2>
 <p><strong>Principal Stratification: A tool for understanding variation in program effects across endogenous subgroups.</strong> Lindsay Page, Avi Feller, Todd Grindal, Luke Miratrix, and Marie-Andree Somers. <em>American Journal of Evaluation.</em> 2015. 36(4): 514-531. [<a href="#" data-bs-target="#aje_ps_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="http://aje.sagepub.com/content/36/4/514" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>]</p>
-
 <div id="aje_ps_abstract" class="collapse"><div class="card card-body">Increasingly, researchers are interested in questions regarding treatment-effect variation across partially or fully latent subgroups defined not by pretreatment characteristics but by postrandomization actions. One promising approach to address such questions is principal stratification. Under this framework, a researcher defines endogenous subgroups, or principal strata, based on post-randomization behaviors under both the observed and the counterfactual experimental conditions. These principal strata give structure to such research questions and provide a framework for determining estimation strategies to obtain desired effect estimates. This article provides a nontechnical primer to principal stratification. We review selected applications to highlight the breadth of substantive questions and methodological issues that this method can inform. We then discuss its relationship to instrumental variables analysis to address binary noncompliance in an experimental context and highlight how the framework can be generalized to handle more complex posttreatment patterns. We emphasize the counterfactual logic fundamental to principal stratification and the key assumptions that render analytic challenges more tractable. We briefly discuss technical aspects of estimation procedures, providing a short guide for interested readers.</div><br></div>
 <p><strong>Hierarchical models for causal effects.</strong> Avi Feller and Andrew Gelman. <em>Emerging Trends in the Social and Behavioral Sciences.</em> 2015. [<a href="#" data-bs-target="#hierarchical_models_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="http://onlinelibrary.wiley.com/doi/10.1002/9781118900772.etrds0160/abstract" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>]</p>
 <div id="hierarchical_models_abstract" class="collapse"><div class="card card-body">Hierarchical models play three important roles in modeling causal effects: (i) accounting for data collection, such as in stratified and split-plot experimental designs; (ii) adjusting for unmeasured covariates, such as in panel studies; and (iii) capturing treatment effect variation, such as in subgroup analyses. Across all three areas, hierarchical models, especially Bayesian hierarchical modeling, offer substantial benefits over classical, non-hierarchical approaches. After discussing each of these topics, we explore some recent developments in the use of hierarchical models for causal inference and conclude with some thoughts on new directions for this research area.</div><br></div>
@@ -327,7 +332,6 @@ In some cases, black defendants are substantially more likely than white defenda
 <p><strong>Red state/blue state divisions in the 2012 presidential election.</strong> Avi Feller, Andrew Gelman, and Boris Shor. <em>The Forum.</em> 2013. 10(4): 127–131. [<a href="#" data-bs-target="#the_forum_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="http://www.degruyter.com/view/j/for.2012.10.issue-4/forum-2013-0014/forum-2013-0014.xml" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>] <br><a class="text-decoration-none" target="_blank" href="http://campaignstops.blogs.nytimes.com/2012/11/12/red-versus-blue-in-a-new-light/?_r=0"><em>New York Times</em> version</a>: “Red versus blue in a new light.” Nov.&nbsp;12, 2012. with Andrew Gelman.</p>
 <div id="the_forum_abstract" class="collapse"><div class="card card-body">The so-called "red/blue paradox" is that rich individuals are more likely to vote Republican but rich states are more likely to support the Democrats. Previous research argued that this seeming paradox could be explained by comparing rich and poor voters within each state – the difference in the Republican vote share between rich and poor voters was much larger in low-income, conservative, middle-American states like Mississippi than in high-income, liberal, coastal states like Connecticut. We use exit poll and other survey data to assess whether this was still the case for the 2012 Presidential election. Based on this preliminary analysis, we find that, while the red/blue paradox is still strong, the explanation offered by Gelman et al. no longer appears to hold. We explore several empirical patterns from this election and suggest possible avenues for resolving the questions posed by the new data.</div><br></div>
 <p><strong>Genome wide adaptations of <em>Plasmodium falciparum</em> in response to lumefantrine selective drug pressure.</strong> Leah Mwai, Abdi Diriye, Victor Masseno, Steven Muriithi, Theresa Feltwell, Jennifer Musyoki, Jacob Lemieux, Avi Feller, Gunnar Mair, Kevin Marsh, Chris Newbold, Alexis Nzila, Celine Carret. <em>PloS One.</em> 2012. 7(2): e31623. [<a href="#" data-bs-target="#plos_one_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0031623" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>]</p>
-
 <div id="plos_one_abstract" class="collapse"><div class="card card-body">The combination therapy of the Artemisinin-derivative Artemether (ART) with Lumefantrine (LM) (CoartemH) is an important malaria treatment regimen in many endemic countries. Resistance to Artemisinin has already been reported, and it is feared that LM resistance (LMR) could also evolve quickly. Therefore molecular markers which can be used to track CoartemH efficacy are urgently needed. Often, stable resistance arises from initial, unstable phenotypes that can be identified in vitro. Here we have used the Plasmodium falciparum multidrug resistant reference strain V1S to induce LMR in vitro by culturing the parasite under continuous drug pressure for 16 months. The initial IC50 (inhibitory concentration that kills 50% of the parasite population) was 24 nM. The resulting resistant strain V1SLM, obtained after culture for an estimated 166 cycles under LM pressure, grew steadily in 378 nM of LM, corresponding to 15 times the IC50 of the parental strain. However, after two weeks of culturing V1SLM in drug-free medium, the IC50 returned to that of the initial, parental strain V1S. This transient drug tolerance was associated with major changes in gene expression profiles: using the PFSANGER Affymetrix custom array, we identified 184 differentially expressed genes in V1SLM. Among those are 18 known and putative transporters including the multidrug resistance gene 1 (pfmdr1), the multidrug resistance associated protein and the V-type H+ pumping pyrophosphatase 2 (pfvp2) as well as genes associated with fatty acid metabolism. In addition we detected a clear selective advantage provided by two genomic loci in parasites grown under LM drug pressure, suggesting that all, or some of those genes contribute to development of LM tolerance—they may prove useful as molecular markers to monitor P. falciparum LM susceptibility.</div><br></div>
 <p><strong><em>In vivo</em> profiles show continuous variation between 2 cellular populations.</strong> Jacob Lemieux*, Avi Feller*, Chris Holmes, and Chris Newbold (* indicates equal contribution). <em>Proceedings of the National Academy of Sciences.</em> 2009. 106 (27), E71–E72. [<a href="#" data-bs-target="#pnas_2_abstract" data-bs-toggle="collapse" class="text-decoration-none">abstract</a>; <a href="http://www.pnas.org/content/106/27/E71.short" class="text-decoration-none" target="_blank"><i class="ai ai-archive" role="img" aria-label="published"></i> published</a>]</p>
 <div id="pnas_2_abstract" class="collapse"><div class="card card-body">In this reply, we argue that seemingly discrete variation in the authors' published gene expression profiles is actually a combination of continuous variation and technical biological errors in the original experiment.</div><br></div>
@@ -419,10 +423,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -432,8 +453,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -445,7 +475,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -489,6 +642,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -514,6 +668,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -574,6 +754,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
