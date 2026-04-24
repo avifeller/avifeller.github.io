@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -28,14 +28,15 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-12ecfb2ecc36a6195821167d1e398e1c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-b68077c7884d845477b9a91ed0b66213.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -86,7 +87,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">teaching</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Feller_CV_2025_Sept.pdf"> 
+    <a class="nav-link" href="./Feller_CV_2026_April.pdf"> 
 <span class="menu-text">cv</span></a>
   </li>  
 </ul>
@@ -123,21 +124,20 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<h2 id="goldman-school-of-public-policy" class="anchored">Goldman School of Public Policy</h2>
-<p>In Fall 2025, I am teaching:</p>
+<p>In Fall 2026, I am teaching:</p>
 <ul>
 <li>Statistics for Program Evaluation (PP 249)</li>
-<li>Case Studies in Prediction, AI, and Public Policy (PP 290; with Deb Raji)</li>
+<li>Advanced Topics in Causal Inference (STAT 260)</li>
 </ul>
 <p>Previously, I have taught:</p>
 <ul>
+<li>Case Studies in Prediction, AI, and Public Policy (PP 290; Fall 2025, with Deb Raji)</li>
+<li>Advanced Topics in Causal Inference (STAT 260; Spring 2025)</li>
 <li>Statistics for Program Evaluation (PP 249; Fall 2016, 2017, 2019-2021, 2023, 2024)</li>
 <li>Data Science for Public Policy (PP 290; Fall 2016; Spring 2020, Fall 2020, Spring 2022, Spring 2024)</li>
 <li>Core Data Analysis &amp; Visualization Skills Workshop (PP 297; Fall 2016, 2017)</li>
 <li>Analytics for Government and Policy (PP 290; Spring 2016)</li>
 </ul>
-<h2 id="department-of-statistics" class="anchored">Department of Statistics</h2>
-<p>I help run the weekly <a href="https://polisci.berkeley.edu/research-and-teaching/lectures-colloquia/research-workshop-quantitative-modeling">Berkeley Methods Workshop</a>.</p>
 
 
 
@@ -193,13 +193,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
