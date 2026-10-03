@@ -1,0 +1,7 @@
+# Local operating-system files and working notes.
+.DS_Store
+/MEMORY.md
+
+# Quarto caches and accidental nested output; this repository serves from its root.
+/.quarto/
+/_site/

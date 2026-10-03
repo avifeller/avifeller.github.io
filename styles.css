@@ -1,9 +1,150 @@
-/* css styles */
-
-body {
-  font-size: 85%;
+/* Shared typography and accessible links. */
+body { font-size: 1rem; line-height: 1.6; }
+body, p, button, input, select { font-family: var(--bs-font-sans-serif); }
+a { color: #36586b; text-underline-offset: 0.18em; }
+a:hover { color: #203e50; }
+a:focus-visible, button:focus-visible {
+  outline: 3px solid #36586b;
+  outline-offset: 4px;
+  border-radius: 2px;
 }
-
+h1, h2, h3, .navbar-title { font-family: "Source Serif 4", Georgia, serif; }
+h1, .h1 { font-size: 2.6rem; font-weight: 500; letter-spacing: -0.035em; line-height: 1.15; }
 h2 {
-  font-size: 1.4rem;  
+  font-size: 1.65rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-top: 2.25rem;
+  border-bottom-color: #eceef0;
+}
+h3 { font-size: 1.2rem; font-weight: 500; letter-spacing: -0.012em; }
+h2[id], h3[id] { scroll-margin-top: 5rem; }
+.navbar { background: #fff !important; border-bottom: 1px solid #edf0f2; }
+.navbar-title { font-size: 1.3rem; font-weight: 500; letter-spacing: -0.02em; }
+.nav-link { font-size: 0.9rem; font-weight: 400; }
+.profile-links, .footer-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+}
+.profile-links { margin-top: 0.65rem; }
+.footer-profile-links { justify-content: flex-end; }
+.profile-links a, .footer-profile-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  color: #87898c;
+  font-size: 1.55rem;
+  line-height: 1;
+  text-decoration: none;
+}
+.profile-links a:hover, .footer-profile-links a:hover { color: #36586b; }
+.profile-links .bi-envelope, .footer-profile-links .bi-envelope { font-size: 1.4rem; }
+
+/* Stack the photo and introduction before the text becomes cramped. */
+.home-content {
+  width: min(100%, 1060px);
+  margin: 0 auto;
+  padding: 1.25rem 0 2rem;
+}
+.profile {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: start;
+  gap: 2.5rem;
+}
+.profile-photo img {
+  display: block;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 30%;
+  border-radius: 6px;
+}
+.profile-intro h1 { margin-top: 0; margin-bottom: 0.45rem; }
+.affiliation { font-size: 1rem; line-height: 1.5; margin-bottom: 0.7rem; }
+.affiliation p { margin-bottom: 0; }
+.home-research {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 1.4rem;
+}
+.home-research-area h3 { margin-top: 0; margin-bottom: 0.6rem; }
+.home-research-area ul { list-style: none; padding: 0; margin: 0; }
+.home-research-area li { font-size: 0.95rem; line-height: 1.5; margin: 0 0 0.6rem; }
+
+/* Compact citations flow naturally as one paragraph at every screen width. */
+.publication {
+  margin: 1rem 0 0.75rem;
+  scroll-margin-top: 5rem;
+  color: #6b7075;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+.publication p { margin-bottom: 0; }
+.publication-title { color: #111; }
+.publication-title strong { font-weight: 600; }
+.publication a { color: inherit; }
+.publication a:hover { color: #454b50; }
+.publication-links {
+  display: inline;
+}
+.publication-links > :is(a, button) {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.28em;
+  border: 1px solid #e8eaed;
+  border-radius: 4px;
+  background: #fdfdfd;
+  color: #626970;
+  font: inherit;
+  font-size: 0.88em;
+  line-height: 1.4;
+  padding: 0.08em 0.42em;
+  margin: 0.04em 0.15em 0.04em 0;
+  text-decoration: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.publication-links > :is(a, button):hover {
+  color: #343a40;
+  background: #fafbfc;
+  border-color: #d9dde1;
+  text-decoration: none;
+}
+.abstract-toggle::after {
+  content: "+";
+  display: inline-block;
+  width: 0.8em;
+  margin-left: 0;
+  font-weight: 600;
+  text-align: center;
+}
+.abstract-toggle[aria-expanded="true"]::after { content: "−"; }
+.publication-award {
+  display: block;
+  margin-top: 0.18rem;
+  color: #786019;
+  font-size: 0.85em;
+}
+/* Open abstracts immediately; Bootstrap swaps classes while toggling. */
+.publication + .collapsing { transition: none; }
+.publication + :is(.collapse, .collapsing) .card-body {
+  color: #6b7075;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+.software-list h3 { margin-bottom: 0.4rem; }
+.software-list p { margin-bottom: 0.6rem; }
+
+@media (max-width: 767.98px) {
+  .home-content { padding-top: 0.4rem; }
+  .profile { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
+  .profile-photo img { width: 180px; height: 180px; }
+  .home-research { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .publication-links > :is(a, button) { padding-block: 0.2em; }
 }
