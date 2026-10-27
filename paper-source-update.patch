@@ -1,0 +1,42 @@
+--- a/academic-website/research.qmd
++++ b/academic-website/research.qmd
+@@ -14,6 +14,14 @@
+ [Google Scholar](https://scholar.google.com/citations?hl=en&user=Mz7heb4AAAAJ&view_op=list_works&sortby=pubdate) · [arXiv](https://arxiv.org/a/feller_a_1.html) · [Software and examples](#software)
+ 
+ ## Select Working Papers
++
++**Neyman Orthogonal Activation Steering.** David Arbour, Erfan Jahanparast, Serina Chang, and Avi Feller. \[<button type="button" class="abstract-toggle" data-bs-toggle="collapse" data-bs-target="#neyman_steering_abstract" aria-controls="neyman_steering_abstract" aria-expanded="false" aria-label="Abstract: Neyman Orthogonal Activation Steering.">abstract</button>; <a class="text-decoration-none" href="https://arxiv.org/abs/2610.33217" target="_blank"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> pre-print</a>\]
++
++```{=html}
++<!-- Abstract source: https://arxiv.org/abs/2610.33217 -->
++<div id="neyman_steering_abstract" class="collapse">
++<div class="card card-body">Activation steering is a popular approach for shifting LLM output toward a desired behavior, and increasingly for generating realistic synthetic data. The standard recipe estimates a steering direction by contrasting LLM activations on prompts with and without a target concept, such as truthfulness. In this paper, we separate the estimand (the steering direction these methods target) from the estimator used to recover it, two notions the literature often conflates. We frame nearly all existing methods as plug-in estimators of the average gradient of an outcome regression, with the binary contrastive label fixed as the outcome. Using this framing, we can immediately incorporate flexible modeling approaches and extend existing methods to allow for continuous outcomes such as log-probabilities or oracle ratings. Flexible ML models that fit the outcome well, however, might not estimate the gradient well, which motivates estimators that target the gradient directly. Drawing on the debiased machine learning literature, we develop a complementary estimator built on the Stein score, the Riesz representer of the gradient functional. Combining the two routes gives an orthogonalized estimator with classical double-robustness properties. We illustrate the framework on activation steering applied to a number of benchmark datasets.</div><br></div>
++```
+ 
+ **Always-On Experimentation.** Ricardo J. Sandoval, David Arbour, Avi Feller, and Michael I. Jordan. \[<button type="button" class="abstract-toggle" data-bs-toggle="collapse" data-bs-target="#always_on_abstract" aria-controls="always_on_abstract" aria-expanded="false" aria-label="Abstract: Always-On Experimentation.">abstract</button>; <a class="text-decoration-none" href="https://arxiv.org/abs/2609.38695" target="_blank"><i class="bi bi-file-earmark-pdf" aria-hidden="true"></i> pre-print</a>\]
+ 
+--- a/academic-website/research-tags.json
++++ b/academic-website/research-tags.json
+@@ -376,6 +376,10 @@
+       "justice"
+     ],
+     "paper-invariant-prediction-comment": [],
+-    "paper-clustering-comment": []
++    "paper-clustering-comment": [],
++    "paper-neyman-steering": [
++      "semiparametric-inference",
++      "ai"
++    ]
+   }
+ }
+--- a/Merit Reviews/Full/Feller_CV_2026_October.typ
++++ b/Merit Reviews/Full/Feller_CV_2026_October.typ
+@@ -353,6 +353,8 @@
+ // ==================================================================
+ #v(12pt)
+ == Select pre-prints and manuscripts under review
++
++#rpub[Arbour, D., Jahanparast, E., Chang, S., and #underline[A. Feller]. "#link("https://arxiv.org/abs/2610.33217")[Neyman Orthogonal Activation Steering.]"]
+ 
+ #rpub[Ben-Michael, E.#super[‡], #underline[Feller, A.], Hirshberg, D., and J. Zubizarreta. "#link("https://arxiv.org/abs/2110.14831")[The Balancing act in causal inference.]"]
+ 
