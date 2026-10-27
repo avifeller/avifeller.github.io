@@ -31,6 +31,15 @@
  }
 --- a/Merit Reviews/Full/Feller_CV_2026_October.typ
 +++ b/Merit Reviews/Full/Feller_CV_2026_October.typ
+@@ -143,7 +143,7 @@
+   row-gutter: 7pt,
+   [2023 --], [Adobe, Research Consultant],
+   [2022], [Google Brain, Visiting Researcher],
+-  [2016 -- 2026], [EveryDay Labs, Co-Founder (acquired by Newsela, 2026)],
++  [2016 -- 2026], [EveryDay Labs, Co-Founder (acquired, 2026)],
+   [2011 -- 2017], [Harvard Kennedy School Government Performance Lab],
+   [2010 -- 2011], [White House Office of Management and Budget, Special Assistant to the Director],
+   [2009 -- 2010], [Center on Budget and Policy Priorities, Research Associate],
 @@ -353,6 +353,8 @@
  // ==================================================================
  #v(12pt)
